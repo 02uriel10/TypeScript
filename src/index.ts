@@ -22,4 +22,4 @@ var obj2= {id:2, name:"objeto2" };
 obj2= obj1;// valido
 obj1= obj2;// no valido, obj2 no tiene las propiedades necesarias
 console.log(obj1);
-console.log(obj2);
+console.log(obj2);  
