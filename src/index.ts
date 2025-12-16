@@ -20,6 +20,19 @@ var obj2= {id:2, name:"objeto2" };
 // en este ejemplo notamos que obj2 no tiene la propiedad booleano ni el metodo print, pero aun asi es valido
 // porque las propiedades id y name son suficientes para que sea del mismo tipo que obj1, siendo que obj2 no tiene limitantes para tener mas propiedades o metodos
 obj2= obj1;// valido
-obj1= obj2;// no valido, obj2 no tiene las propiedades necesarias
-console.log(obj1);
-console.log(obj2);  
+//obj1= obj2; no valido, obj2 no tiene las propiedades necesarias
+
+//ambitos let
+let index=0;
+if (index===0){
+    let index=2;
+    console.log(index);
+}
+console.log(index);
+//Union Types
+function printId(id: number | string){
+    console.log("Your ID is: " + id);
+}
+printId(1);
+printId("Hello")
+//printId(true); no valido
