@@ -3,7 +3,7 @@ enum DoorState{
     Closed
 }
 function printDoorState(state: DoorState){
-    console.log("Valor del ennum: " + state);
+    console.log("Valor del enum: " + state);
     switch(state){
         case DoorState.Open:
             console.log("The door is open");
@@ -13,9 +13,9 @@ function printDoorState(state: DoorState){
             break;
     }
 }
-printDoorState(DoorState.Open);
-printDoorState(DoorState.Closed);
+printDoorState(DoorState.Open)
+printDoorState(DoorState.Closed)
 // Expresiones condicionales
-const numero: number= 10;
+const numero: number= 11;
 const mensaje: string = numero > 10 ? "El número es mayor a 10" : "El número es menor o igual a 10";
 console.log(mensaje);
