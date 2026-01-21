@@ -43,3 +43,24 @@ const gerente= new Gerente()
 imprimir(persona);
 imprimir(gerente);
 
+//Funciones estaticas
+class StaticClass{
+    static print(){
+        console.log(10)
+    }
+}
+StaticClass.print()
+
+class staticCount{
+    static count=0;
+    contar(){
+        staticCount.count++;
+    }
+}
+const primerInstancia= new staticCount()
+const segundaInstancia= new staticCount()
+console.log(staticCount.count);
+primerInstancia.contar();
+console.log(staticCount.count);
+segundaInstancia.contar();
+console.log(staticCount.count);
