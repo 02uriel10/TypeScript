@@ -19,14 +19,25 @@ class BaseClass{
     constructor(id:number){
         this.id=id;
     }
+    print(text:string):void{
+        console.log("Imprimiendo desde BaseClass"+text)
+    }
 }
 class MyClass extends BaseClass{
     name:string=""
     constructor(id:number,name:string){
-        super(1);
+        super(id);
         this.name=name;
+
+    }
+    print(text: string): void{
+        console.log("Imprimiendo desde MyClass"+text)
+        super.print(text);
     }
 }
 const myClass: MyClass=new MyClass(1,"Ana");
+const baseClass: BaseClass=new BaseClass(1);
 console.log(myClass.id);
 console.log(myClass.name);
+myClass.print("");
+baseClass.print("");
