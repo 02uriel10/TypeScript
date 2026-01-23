@@ -15,29 +15,39 @@ class user implements IdName{
 }
 //Herencia de clases; las clases solo pueden heredar de una clase padre, mientras que las interfaces pueden heredar de muchas otras interfaces
 class BaseClass{
-    id:number=0
-    constructor(id:number){
+    private id:number
+    protected name:string
+    constructor(id:number, name:string){
         this.id=id;
+        this.name=name;
     }
     print(text:string):void{
         console.log("Imprimiendo desde BaseClass"+text)
     }
+    printId(){
+        console.log(this.id);
+    }
 }
 class MyClass extends BaseClass{
-    name:string=""
+    
     constructor(id:number,name:string){
-        super(id);
+        super(id,name);
         this.name=name;
 
     }
+
+    printName(){
+        console.log("Jelipe ");
+    }
+    
+
     print(text: string): void{
         console.log("Imprimiendo desde MyClass"+text)
         super.print(text);
     }
 }
 const myClass: MyClass=new MyClass(1,"Ana");
-const baseClass: BaseClass=new BaseClass(1);
-console.log(myClass.id);
-console.log(myClass.name);
-myClass.print("");
-baseClass.print("");
+
+myClass.printName();
+myClass.printId();
+//Metodos Protegidos
